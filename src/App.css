@@ -1,0 +1,195 @@
+/* Paleta de Cores dos Tipos de Pokémon */
+:root {
+  --bg-body: #f0f2f5;
+  --text-main: #2d3436;
+  --fire: #ff9d55;
+  --grass: #63bb5b;
+  --water: #5090d6;
+  --bug: #91c12f;
+  --normal: #919aa2;
+  --electric: #f4d23c;
+  --poison: #b567ce;
+  --ground: #d97845;
+  --fairy: #ec8fe6;
+  --fighting: #ce416b;
+  --psychic: #fa7179;
+  --rock: #c5b78c;
+  --ghost: #5269ad;
+  --ice: #73cebf;
+  --dragon: #0b6dc3;
+  --steel: #5a8ea1;
+}
+
+body {
+  background-color: var(--bg-body);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  color: var(--text-main);
+}
+
+.pokedex-app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+header h1 {
+  font-size: 3.5rem;
+  margin-bottom: 25px;
+  letter-spacing: -1px;
+  color: #1a1a1a;
+}
+
+/* Barra de Busca Estilizada */
+.search-container {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  padding: 12px 25px;
+  border-radius: 50px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+  max-width: 450px;
+  margin: 0 auto;
+  transition: 0.3s;
+}
+
+.search-container:focus-within {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+.search-container input {
+  border: none;
+  outline: none;
+  padding: 10px;
+  width: 100%;
+  font-size: 1.1rem;
+  margin-left: 10px;
+}
+
+/* Grid Layout */
+.poke-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 25px;
+}
+
+/* Card do Pokémon */
+.poke-card {
+  border-radius: 24px;
+  padding: 30px 20px;
+  text-align: center;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+  color: #fff;
+  text-transform: capitalize;
+  overflow: hidden;
+}
+
+.poke-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* Efeito de fundo no card */
+.poke-card::before {
+  content: '';
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  top: -20px;
+  right: -20px;
+}
+
+.poke-id {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-weight: 800;
+  font-size: 1.2rem;
+  opacity: 0.4;
+}
+
+.poke-card img {
+  width: 160px;
+  height: 160px;
+  filter: drop-shadow(0 8px 12px rgba(0,0,0,0.15));
+  z-index: 1;
+  position: relative;
+}
+
+.poke-card h2 {
+  margin: 15px 0 10px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Badges de Tipo */
+.types {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.type-badge {
+  background: rgba(255, 255, 255, 0.25);
+  padding: 6px 16px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  backdrop-filter: blur(4px);
+}
+
+/* Cores Mapeadas para os Tipos */
+.fire { background: linear-gradient(135deg, #ff9d55, #ff6b6b); }
+.grass { background: linear-gradient(135deg, #63bb5b, #489442); }
+.water { background: linear-gradient(135deg, #5090d6, #3b71b8); }
+.bug { background: linear-gradient(135deg, #91c12f, #76a024); }
+.normal { background: linear-gradient(135deg, #919aa2, #6d757d); }
+.electric { background: linear-gradient(135deg, #f4d23c, #dab200); color: #444; }
+.poison { background: linear-gradient(135deg, #b567ce, #8f4ba6); }
+.ground { background: linear-gradient(135deg, #d97845, #b35f32); }
+.fairy { background: linear-gradient(135deg, #ec8fe6, #d66ebf); }
+.fighting { background: linear-gradient(135deg, #ce416b, #a63053); }
+.psychic { background: linear-gradient(135deg, #fa7179, #d94d55); }
+.rock { background: linear-gradient(135deg, #c5b78c, #a3956b); }
+.ghost { background: linear-gradient(135deg, #5269ad, #3d4f8a); }
+.ice { background: linear-gradient(135deg, #73cebf, #53a69a); }
+.dragon { background: linear-gradient(135deg, #0b6dc3, #085191); }
+.steel { background: linear-gradient(135deg, #5a8ea1, #436e7e); }
+
+/* Loader animado */
+.loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  font-size: 1.5rem;
+  font-weight: 600;
+  gap: 20px;
+}
+
+.loader::after {
+  content: '';
+  width: 50px;
+  height: 50px;
+  border: 5px solid #ddd;
+  border-top-color: #ef5350;
+  border-radius: 50%;
+  animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
