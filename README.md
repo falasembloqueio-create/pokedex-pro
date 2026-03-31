@@ -1,16 +1,28 @@
-# React + Vite
+# Pokédex Pro 👾
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> Enciclopédia digital de Pokémon com consumo de dados em tempo real via PokeAPI.
 
-Currently, two official plugins are available:
+A **Pokédex Pro** é uma aplicação front-end de alto desempenho que explora a listagem e filtragem de dados complexos. Desenvolvida no meu intensivo de 18 dias, o foco aqui foi a **comunicação com APIs REST** e a criação de uma interface limpa e responsiva para exibição de grandes coleções de itens.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🔗 Links
+- **Deploy:** [https://falasembloqueio-create.github.io/pokedex-pro/](https://falasembloqueio-create.github.io/pokedex-pro/)
+- **Repositório:** [https://github.com/falasembloqueio-create/pokedex-pro](https://github.com/falasembloqueio-create/pokedex-pro)
 
-## React Compiler
+## 🛠️ Tecnologias e Ferramentas
+- **React + Vite**: Estrutura ágil para renderização de componentes.
+- **TypeScript**: Tipagem rigorosa para os dados vindos da API, garantindo robustez.
+- **PokeAPI**: Fonte de dados oficial para informações e sprites dos Pokémon.
+- **Tailwind CSS**: Estilização baseada em cards modernos e Grid Layout.
+- **Lucide React**: Ícones de navegação e busca.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Funcionalidades Principais
+- **Consumo de API REST**: Busca dinâmica de dados (Nomes, IDs, Tipos e Imagens).
+- **Sistema de Busca**: Filtro em tempo real para encontrar Pokémon específicos instantaneamente.
+- **Grid Responsivo**: Visualização otimizada para Desktop, Tablets e Smartphones.
+- **Sprites Dinâmicos**: Carregamento de imagens oficiais diretamente dos servidores da API.
 
-## Expanding the ESLint configuration
+## 🧠 Desafios e Aprendizados
+O maior desafio técnico deste projeto foi o **Gerenciamento de Assincronismo**. Lidar com múltiplas requisições `fetch` para montar a lista de Pokémon exigiu um bom entendimento de `Promises` e `useEffect`. Além disso, trabalhei a otimização da interface para garantir que a rolagem da página e a filtragem de busca não causassem travamentos, focando em uma experiência de usuário (UX) fluida.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+Desenvolvido por [Davi] - [Conecte-se comigo no LinkedIn](www.linkedin.com/in/davi-gomes-azevedo-b326b139b)
